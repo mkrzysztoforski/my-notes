@@ -4,7 +4,7 @@ import type { Actions } from './$types';
 const openAi = new OpenAI(getRequiredEnv('OPEN_AI_KEY'));
 
 export const actions = {
-	addNote: async ({ request }) => {
+	generateTagsAndSummary: async ({ request }) => {
 		const formData = Object.fromEntries(await request.formData());
 
 		const [summaryData, tagsData] = await Promise.all([

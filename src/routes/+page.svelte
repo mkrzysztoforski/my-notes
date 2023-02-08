@@ -20,7 +20,7 @@
 		data.set('title', note.title);
 		data.set('content', note.content);
 
-		const response = await fetch('?/addNote', {
+		const response = await fetch('?/generateTagsAndSummary', {
 			method: 'POST',
 			body: data
 		});
@@ -52,7 +52,7 @@
 		data.set('title', note.title);
 		data.set('content', note.content);
 
-		const response = await fetch('?/addNote', {
+		const response = await fetch('?/generateTagsAndSummary', {
 			method: 'POST',
 			body: data
 		});
